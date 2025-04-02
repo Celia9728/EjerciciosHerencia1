@@ -52,7 +52,7 @@ public class Multimedia {
     private String validarFormato(String formato) {
 
         for (int i = 0; i < this.formatoTipos.length; i++) {
-            formato = (formato.equalsIgnoreCase(this.formatoTipos[i])) ? this.formatoTipos[i] : "mp3";
+            formato = (formato.equals(this.formatoTipos[i])) ? this.formatoTipos[i] : "mp3";
         }
         return formato;
     }
