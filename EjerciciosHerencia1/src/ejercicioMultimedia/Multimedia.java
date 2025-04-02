@@ -50,9 +50,11 @@ public class Multimedia {
 
     // VALIDACIONES
     private String validarFormato(String formato) {
-
+        
         for (int i = 0; i < this.formatoTipos.length; i++) {
-            formato = (formato.equals(this.formatoTipos[i])) ? this.formatoTipos[i] : "mp3";
+            if (formato.equals(this.formatoTipos[i])) {
+                return formato;
+            }
         }
         return formato;
     }

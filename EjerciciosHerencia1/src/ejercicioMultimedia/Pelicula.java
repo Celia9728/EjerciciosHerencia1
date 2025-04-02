@@ -24,20 +24,11 @@ public class Pelicula extends Multimedia {
 
     // METODO EQUALS
     public boolean equals(Pelicula pelicula) {
-        boolean esIgual= true;
-        
-        boolean comparacionMultimedia = super.equals(pelicula);
         boolean comparacionActor = this.actorPrincipal.equals(pelicula.actorPrincipal);
         boolean comparacionActriz = this.actrizPrincipal.equals(pelicula.actrizPrincipal);
-
-        
-        if (!comparacionActor && comparacionActriz) {
-            esIgual = false;
-        } else{
-            
-        }
-        
-        return esIgual;
+        boolean comparacionActorActriz = comparacionActor && comparacionActriz;
+     
+        return comparacionActorActriz && super.equals(pelicula);
     }
     
     // METODO TOSTRING
